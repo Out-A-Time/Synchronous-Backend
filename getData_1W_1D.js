@@ -74,8 +74,10 @@ let getDataIntervally_1W_1D = function () {
   client
     .executeBulkQueries()
     .then((result) => {
-      console.log("//////////////1W and 1D///////////////");
-      console.log(result);
+      console.log("########## 1W and 1D ##########");
+      console.log("BTC/USDT price: ", result[0].result.close);
+      // console.log(result);
+      return result;
     })
     .catch((error) => {
       console.log(error);
