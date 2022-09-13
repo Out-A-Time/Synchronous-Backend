@@ -7,8 +7,28 @@ const taapi = require("taapi");
 // Setup client with authentication
 const client = taapi.client(envAuth);
 
+// let {
+//   btcPrice,
+//   MA200_1W,
+//   MA100_1W,
+//   MA50_1W,
+//   MA5_1W,
+//   EMA_1W,
+//   RSI_1W,
+//   MACD_1W_value,
+//   MACD_1W_signal,
+//   MACD_1W_hist,
+//   BB_1W_upper,
+//   BB_1W_middle,
+//   BB_1W_lower,
+//   Stoch_1W_valueK,
+//   Stoch_1W_valueD,
+// } = require("./db_test");
+
+// let { dataBase_1W_1D } = require("./db_test");
+
 //GET BTC price and data for 1W and 1D
-let getDataIntervally_1W_1D = function () {
+let getDataIntervally_1W_1D = function (dataCallback) {
   // // Init bulk queries. This resets all previously added queries
   client.initBulkQueries();
   // Get the BTC/USDT on Binance
@@ -76,8 +96,16 @@ let getDataIntervally_1W_1D = function () {
     .then((result) => {
       console.log("########## 1W and 1D ##########");
       console.log("BTC/USDT price: ", result[0].result.close);
+      dataCallback(result);
       // console.log(result);
-      return result;
+      // console.log(btcPrice);
+      // btcPrice = result[0].result.close;
+      // MA200_1W = result[1].result.value;
+      // MA100_1W = result[2].result.value;
+      // console.log("BT Price: ", btcPrice);
+      // console.log("MA200 1W: ", MA200_1W);
+      // console.log("MA100 1W: ", MA100_1W);
+      // console.log(data_1W_1D);
     })
     .catch((error) => {
       console.log(error);

@@ -3,68 +3,73 @@ const { getDataIntervally_12h_8h } = require("./getData_12h_8h");
 const { getDataIntervally_4h_1h } = require("./getData_4h_1h");
 const { getDataIntervally_15min_5min } = require("./getData_15min_5min");
 
-// Promise.resolve()
-//   .then(() => delay(0))
-//   .then(() => log1())
-//   .then(() => delay(16000))
-//   .then(() => log2())
-//   .then(() => delay(16000))
-//   .then(() => log3())
-//   .then(() => delay(16000))
-//   .then(() => log4());
-
-Promise.resolve()
-  .then(() => delay(0))
-  .then(async () => await log1())
-  .then(() => delay(16000))
-  .then(async () => await log1());
-
 function delay(duration) {
   return new Promise((resolve) => {
     setTimeout(() => resolve(), duration);
   });
 }
 
-async function log1() {
+function getData1W_1D() {
   try {
-    await getDataIntervally_1W_1D();
+    getDataIntervally_1W_1D(dataCallback);
   } catch (error) {
     console.error(error);
     setTimeout(() => {
-      log1();
-    }, 16000);
+      getData1W_1D();
+    }, timeDelay);
   }
 }
 
-function log2() {
+function getData12h_8h() {
   try {
-    getDataIntervally_12h_8h();
+    getDataIntervally_12h_8h(dataCallback);
   } catch (error) {
     console.error(error);
     setTimeout(() => {
-      log1();
-    }, 16000);
+      getData1W_1D();
+    }, timeDelay);
   }
 }
 
-function log3() {
+function getData4h_1h() {
   try {
-    getDataIntervally_4h_1h();
+    getDataIntervally_4h_1h(dataCallback);
   } catch (error) {
     console.error(error);
     setTimeout(() => {
-      log1();
-    }, 16000);
+      getData1W_1D();
+    }, timeDelay);
   }
 }
 
-function log4() {
+function getData15min_5min() {
   try {
-    getDataIntervally_15min_5min();
+    getDataIntervally_15min_5min(dataCallback);
   } catch (error) {
     console.error(error);
     setTimeout(() => {
-      log1();
-    }, 16000);
+      getData1W_1D();
+    }, timeDelay);
   }
 }
+
+function dataCallback(clientResult) {
+  result = clientResult;
+  console.log("HERE: ", result[0].result.close);
+}
+
+const getAllDataFromAPI = async function () {
+  const timeDelay = 20 * 1000;
+  Promise.resolve()
+    .then(() => delay(0))
+    .then(() => getData1W_1D())
+    .then(() => delay(timeDelay))
+    .then(() => getData12h_8h())
+    .then(() => delay(timeDelay))
+    .then(() => getData4h_1h())
+    .then(() => delay(timeDelay))
+    .then(() => getData15min_5min())
+    .then(() => delay(timeDelay));
+};
+
+getAllDataFromAPI();
