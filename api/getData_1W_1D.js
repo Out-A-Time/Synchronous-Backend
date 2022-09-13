@@ -34,7 +34,7 @@ let getDataIntervally_1W_1D = function (dataCallback) {
   // Get the BTC/USDT on Binance
   //Candle Current Price / 1m
   client.addBulkQuery("candle", "binance", "BTC/USDT", "1m");
-  // MA and EMA / 1W
+  // Moving Average 200/100/50/5
   client.addBulkQuery("ma", "binance", "BTC/USDT", "1w", {
     optInTimePeriod: 200,
   });
