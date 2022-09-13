@@ -74,8 +74,6 @@ let getDataIntervally_15min_5min = function (dataCallback) {
   client
     .executeBulkQueries()
     .then((result) => {
-      console.log("########## 15m and 5m ##########");
-      console.log("BTC/USDT price: ", result[0].result.close);
       dataCallback(result);
       // console.log(result);
     })

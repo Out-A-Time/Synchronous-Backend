@@ -94,18 +94,8 @@ let getDataIntervally_1W_1D = function (dataCallback) {
   client
     .executeBulkQueries()
     .then((result) => {
-      console.log("########## 1W and 1D ##########");
-      console.log("BTC/USDT price: ", result[0].result.close);
       dataCallback(result);
       // console.log(result);
-      // console.log(btcPrice);
-      // btcPrice = result[0].result.close;
-      // MA200_1W = result[1].result.value;
-      // MA100_1W = result[2].result.value;
-      // console.log("BT Price: ", btcPrice);
-      // console.log("MA200 1W: ", MA200_1W);
-      // console.log("MA100 1W: ", MA100_1W);
-      // console.log(data_1W_1D);
     })
     .catch((error) => {
       console.log(error);

@@ -74,8 +74,6 @@ let getDataIntervally_12h_8h = function (dataCallback) {
   client
     .executeBulkQueries()
     .then((result) => {
-      console.log("########## 12h and 8h ##########");
-      console.log("BTC/USDT price: ", result[0].result.close);
       dataCallback(result);
       // console.log(result);
     })
