@@ -145,3 +145,24 @@ let dataBase_1W_1D = {};
 ];
 
 module.exports = { hi, dataBase, dataBase_1W_1D };
+
+//Route for BTC_USDT
+// coinsRouter.route("/BTC_USDT").get(function (req, res) {
+//   res.send(`<h1>BTC-USDT:</h1>
+//     <h2>BTC-USDT Current Price: $${resultBTC_1W[0].result.close}</h2>
+//     <h2>MA200_1W: ${result[1].result.value}</h2>
+//     <h2>MA100_1W: ${result[2].result.value}</h2>
+//     <h2>MA50_1W: ${result[3].result.value}</h2>
+//     <h2>MA5_1W: ${result[4].result.value}</h2>
+//     <h2>EMA21_1W: ${result[5].result.value}</h2>
+//     <h2>RSI_1W: ${result[6].result.value}</h2>
+//     <h2>MACD_1W: ${result[7].result}</h2>
+//     <h2>Bollinger Bands_1W: </h2>
+//           <h2>ValueUpperBand: ${result[8].result.valueUpperBand}</h2>
+//           <h2>ValueMiddleBand: ${result[8].result.valueMiddleBand}</h2>
+//           <h2>ValueLowerBand: ${result[8].result.valueLowerBand}</h2>
+//     <h2>Stochastic_1W: </h2>
+//           <h2>ValueK: ${result[9].result.valueK}</h2>
+//           <h2>ValueD: ${result[9].result.valueD}</h2>
+//     `);
+// });
