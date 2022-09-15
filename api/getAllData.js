@@ -3,6 +3,11 @@ const { getDataIntervally_12h_8h } = require("./getData_12h_8h");
 const { getDataIntervally_4h_1h } = require("./getData_4h_1h");
 const { getDataIntervally_15min_5min } = require("./getData_15min_5min");
 
+const { writeFile, readFile } = require("fs");
+const { promisify } = require("util");
+
+// let resultBTC_1W_1D;
+
 function getData1W_1D() {
   function dataCallback(result) {
     resultBTC_1W_1D = result;
@@ -11,6 +16,32 @@ function getData1W_1D() {
     console.log("MA200_1W: ", resultBTC_1W_1D[1].result.value);
     console.log("MA100_1W: ", resultBTC_1W_1D[2].result.value);
     // console.log("ALL: ", resultBTC_1W);
+
+    ////////WRITE READ RESULTS///////////
+    const readFileasync = promisify(readFile);
+    const writeFileasync = promisify(writeFile);
+
+    const file_handler = async () => {
+      try {
+        const content = await writeFileasync(
+          "./writeMe.json",
+          JSON.stringify(result)
+        );
+        try {
+          const data = await readFileasync("./writeMe.json", "utf-8");
+          console.log("New file has been created .");
+          console.log(data);
+        } catch (error) {
+          throw error;
+        }
+      } catch (error) {
+        throw error;
+      }
+    };
+
+    file_handler();
+
+    /////////////////////////////////////
   }
   try {
     getDataIntervally_1W_1D(dataCallback);

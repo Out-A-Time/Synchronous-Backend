@@ -97,6 +97,7 @@ let getDataIntervally_1W_1D = function (dataCallback) {
       dataCallback(result);
       // console.log(result);
     })
+
     .catch((error) => {
       console.log(error);
     });

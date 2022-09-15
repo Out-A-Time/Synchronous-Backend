@@ -15,7 +15,7 @@ app.use("/coins-pair", coinsRouter);
 // Root path
 app.get("/", function (req, res) {
   res.send(`<h1>Test route up and running! For more go to: /BTC_USDT</h1>
-  <h2>BTC-USDT Price: $${resultBTC_1W_D[0].result.close}</h2>`);
+  <h2>BTC-USDT Price: $${resultBTC_1W_1D[0].result.close}</h2>`);
 });
 
 getAllDataFromAPI();

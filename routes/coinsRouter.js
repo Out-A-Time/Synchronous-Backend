@@ -1,6 +1,10 @@
 const express = require("express");
 const coinsRouter = express.Router();
 
+// let { resultBTC_1W_1D } = require("../api/getAllData");
+
+// console.log("HERE: ", resultBTC_1W_1D);
+
 //testing middleware
 coinsRouter.use(function (req, res, next) {
   console.log("Testing middleware: ", req.url, "@", Date.now());
