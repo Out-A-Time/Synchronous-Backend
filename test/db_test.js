@@ -144,4 +144,28 @@ let dataBase_1W_1D = {};
   },
 ];
 
+
+
+
+
+
+
+<h4>MACD_1W: ${resultBTC_1W_1D[7].result}</h4>
+<h2>Bollinger Bands_1W: </h2>
+<h2>ValueUpperBand: ${resultBTC_1W_1D[8].result.valueUpperBand}</h2>
+<h2>ValueMiddleBand: ${resultBTC_1W_1D[8].result.valueMiddleBand}</h2>
+<h2>ValueLowerBand: ${resultBTC_1W_1D[8].result.valueLowerBand}</h2>
+<h2>Stochastic_1W: </h2>
+<h2>ValueK: ${resultBTC_1W_1D[9].result.valueK}</h2>
+<h2>ValueD: ${resultBTC_1W_1D[9].result.valueD}</h2>
+
+
+
+
+
+
+
 module.exports = { hi, dataBase, dataBase_1W_1D };
+
+
+
