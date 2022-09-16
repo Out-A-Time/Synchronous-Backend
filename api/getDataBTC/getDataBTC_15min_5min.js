@@ -8,7 +8,7 @@ const taapi = require("taapi");
 const client = taapi.client(envAuth);
 
 //GET BTC price and data for 15minutes and 5 minutes
-let getDataIntervally_15min_5min = function (dataCallback) {
+let getDataBTC_15min_5min = function (getDataBTC_15min_5min_handler) {
   // // Init bulk queries. This resets all previously added queries
   client.initBulkQueries();
   // Get the BTC/USDT on Binance
@@ -74,7 +74,7 @@ let getDataIntervally_15min_5min = function (dataCallback) {
   client
     .executeBulkQueries()
     .then((result) => {
-      dataCallback(result);
+      getDataBTC_15min_5min_handler(result);
       // console.log(result);
     })
     .catch((error) => {
@@ -82,4 +82,4 @@ let getDataIntervally_15min_5min = function (dataCallback) {
     });
 };
 
-module.exports = { getDataIntervally_15min_5min };
+module.exports = { getDataBTC_15min_5min };

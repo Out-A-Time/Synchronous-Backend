@@ -28,7 +28,7 @@ const client = taapi.client(envAuth);
 // let { dataBase_1W_1D } = require("./db_test");
 
 //GET BTC price and data for 1W and 1D
-let getDataIntervally_1W_1D = function (dataCallback) {
+let getDataBTC_1W_1D = function (getDataBTC_1W_1D_handler) {
   // // Init bulk queries. This resets all previously added queries
   client.initBulkQueries();
   // Get the BTC/USDT on Binance
@@ -94,7 +94,7 @@ let getDataIntervally_1W_1D = function (dataCallback) {
   client
     .executeBulkQueries()
     .then((result) => {
-      dataCallback(result);
+      getDataBTC_1W_1D_handler(result);
       // console.log(result);
     })
 
@@ -103,4 +103,4 @@ let getDataIntervally_1W_1D = function (dataCallback) {
     });
 };
 
-module.exports = { getDataIntervally_1W_1D };
+module.exports = { getDataBTC_1W_1D };
