@@ -2,8 +2,11 @@ const filehandler = require("../data_storage/savingData");
 
 function getDataBTC_1W_1D_handler(result) {
   resultBTC_1W_1D = result;
-  console.log("########## 1W and 1D ##########");
-  filehandler("dataBTC_1W_1D.json", resultBTC_1W_1D);
+
+  const path = console.log("########## 1W and 1D ##########");
+  // filehandler("dataBTC_1W_1D.json", resultBTC_1W_1D);
+
+  // filehandler("../data_storage/dataBTC/dataBTC_1W_1D.json", resultBTC_1W_1D);
   //   console.log("ALL: ", resultBTC_1W);
 }
 

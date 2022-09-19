@@ -14,7 +14,7 @@ const file_handler = async (filename, result) => {
     console.log("content:", content);
     try {
       const data = await readFileasync(filename, "utf-8");
-      console.log(`New file has been created: ${filename}`);
+      console.log(`File has been created or updated: ${filename}`);
       // console.log(data);
     } catch (error) {
       throw error;
