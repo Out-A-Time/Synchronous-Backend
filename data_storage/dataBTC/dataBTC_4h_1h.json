@@ -1,0 +1,121 @@
+[
+  {
+    "id": "candle_binance_BTC/USDT_1m",
+    "indicator": "candle",
+    "result": {
+      "timestampHuman": "2022-10-15 19:59:00 (Saturday) UTC",
+      "timestamp": "1665863940",
+      "open": "19100.05",
+      "high": "19100.25",
+      "low": "19098.84",
+      "close": "19099.27",
+      "volume": "0.79298"
+    }
+  },
+  {
+    "id": "ma_binance_BTC/USDT_4h",
+    "indicator": "ma",
+    "result": { "value": "19537.750300000018" }
+  },
+  {
+    "id": "ma_binance_BTC/USDT_4h",
+    "indicator": "ma",
+    "result": { "value": "19473.225000000006" }
+  },
+  {
+    "id": "ma_binance_BTC/USDT_4h",
+    "indicator": "ma",
+    "result": { "value": "19284.93739999999" }
+  },
+  {
+    "id": "ma_binance_BTC/USDT_4h",
+    "indicator": "ma",
+    "result": { "value": "19153.081999999973" }
+  },
+  {
+    "id": "ema_binance_BTC/USDT_4h",
+    "indicator": "ema",
+    "result": { "value": "19230.972070144202" }
+  },
+  {
+    "id": "rsi_binance_BTC/USDT_4h",
+    "indicator": "rsi",
+    "result": { "value": "43.89682348920497" }
+  },
+  {
+    "id": "macd_binance_BTC/USDT_4h",
+    "indicator": "macd",
+    "result": {
+      "valueMACD": "-30.9700674658161",
+      "valueMACDSignal": "-14.875178610864616",
+      "valueMACDHist": "-16.094888854951485"
+    }
+  },
+  {
+    "id": "bbands2_binance_BTC/USDT_4h",
+    "indicator": "bbands2",
+    "result": {
+      "valueUpperBand": "19703.186666489182",
+      "valueMiddleBand": "19225.29500000001",
+      "valueLowerBand": "18747.403333510836"
+    }
+  },
+  {
+    "id": "stoch_binance_BTC/USDT_4h",
+    "indicator": "stoch",
+    "result": { "valueK": "53.44000030270873", "valueD": "54.78907196457309" }
+  },
+  {
+    "id": "ma_binance_BTC/USDT_1h",
+    "indicator": "ma",
+    "result": { "value": "19286.5717" }
+  },
+  {
+    "id": "ma_binance_BTC/USDT_1h",
+    "indicator": "ma",
+    "result": { "value": "19196.951300000004" }
+  },
+  {
+    "id": "ma_binance_BTC/USDT_1h",
+    "indicator": "ma",
+    "result": { "value": "19357.79819999999" }
+  },
+  {
+    "id": "ma_binance_BTC/USDT_1h",
+    "indicator": "ma",
+    "result": { "value": "19115.821999999996" }
+  },
+  {
+    "id": "ema_binance_BTC/USDT_1h",
+    "indicator": "ema",
+    "result": { "value": "19170.389938974033" }
+  },
+  {
+    "id": "rsi_binance_BTC/USDT_1h",
+    "indicator": "rsi",
+    "result": { "value": "39.03802657499993" }
+  },
+  {
+    "id": "macd_binance_BTC/USDT_1h",
+    "indicator": "macd",
+    "result": {
+      "valueMACD": "-50.47435068449704",
+      "valueMACDSignal": "-54.44211974478095",
+      "valueMACDHist": "3.9677690602839135"
+    }
+  },
+  {
+    "id": "bbands2_binance_BTC/USDT_1h",
+    "indicator": "bbands2",
+    "result": {
+      "valueUpperBand": "19224.285003664318",
+      "valueMiddleBand": "19151.80349999999",
+      "valueLowerBand": "19079.321996335664"
+    }
+  },
+  {
+    "id": "stoch_binance_BTC/USDT_1h",
+    "indicator": "stoch",
+    "result": { "valueK": "42.93164904430731", "valueD": "45.322667842412805" }
+  }
+]

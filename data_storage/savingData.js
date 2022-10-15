@@ -11,11 +11,11 @@ const writeFileasync = promisify(writeFile);
 const file_handler = async (filename, result) => {
   try {
     const content = await writeFileasync(filename, JSON.stringify(result));
-    console.log("content:", content);
+    console.log(`File has been saved: ${filename}`);
     try {
       const data = await readFileasync(filename, "utf-8");
-      console.log(`File has been created or updated: ${filename}`);
-      // console.log(data);
+      console.log(`File has been read: ${filename}`);
+      console.log("READ DATA:", data);
     } catch (error) {
       throw error;
     }
